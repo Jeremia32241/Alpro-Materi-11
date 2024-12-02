@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    const int jumlahAngka = 5;
+    int angka[jumlahAngka];
+
+    cout << "Masukkan 5 angka integer:\n";
+    for (int i = 0; i < jumlahAngka; ++i) {
+        cout << "Angka ke-" << i+1 << ": ";
+        cin >> angka[i];
+    }
+
+    cout << "\nElemen-elemen array:\n";
+    for (int i = 0; i < jumlahAngka; ++i) {
+        cout << angka[i] << " ";
+    }
+
+    return 0;
+}   
