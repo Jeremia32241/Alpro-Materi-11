@@ -8,7 +8,6 @@ int main() {
     int angka[jumlahAngka];
     int max;
 
-    // Meminta pengguna memasukkan angka
     cout << "Masukkan 7 angka integer:\n";
     for (int i = 0; i < jumlahAngka; ++i) {
         cout << "Angka ke-" << i+1 << ": ";
