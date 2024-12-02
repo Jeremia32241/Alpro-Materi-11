@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void inputData(int arr[], int n) {
+    for (int i = 0; i < n; ++i) {
+        cout << "Angka ke-" << i+1 << ": ";
+        cin >> arr[i];
+    }
+}
+
+int hitungJumlah(int arr[], int n) {
+    int jumlah = 0;
+    for (int i = 0; i < n; ++i) {
+        jumlah += arr[i];
+    }
+    return jumlah;
+}
+
+void tampilkanHasil(int arr[], int n, int jumlah) {
+    cout << "\nData Angka dan Jumlahnya:\n";
+    cout << setw(5) << "No." << setw(8) << "Angka" << setw(18) << "Jumlah Kumulatif" << endl;
+    cout << setw(5) << "----" << setw(8) << "-----" << setw(18) << "----------------" << endl;
+    int jumlahSementara = 0;
+    for (int i = 0; i < n; ++i) {
+        jumlahSementara += arr[i];
+        cout << setw(5) << i+1 << setw(8) << arr[i] << setw(18) << jumlahSementara << endl;
+    }
+    cout << "\nJumlah semua angka: " << setw(18) << jumlah << endl;
+}
+
+int main() {
+    const int jumlahAngka = 10;
+    int angka[jumlahAngka];
+
+    inputData(angka, jumlahAngka);
+
+    int total = hitungJumlah(angka, jumlahAngka);
+
+    tampilkanHasil(angka, jumlahAngka, total);
+
+    return 0;
+}
